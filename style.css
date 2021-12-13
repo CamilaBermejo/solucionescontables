@@ -12,6 +12,7 @@
     position: fixed;
     left:0;
     top:0;
+    z-index: 1;
 }
 
 main{
@@ -20,8 +21,17 @@ main{
 
 
 body{
-    font-size: 1rem;
+    font-size: 0.75rem;
 }
+
+.separator{
+    width: 100%;
+}
+
+    div.separator{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 
 .logo-nav-container{
     display: flex;
@@ -60,15 +70,95 @@ img.logo{
     padding: 0.7rem;
 }
 
-.home{
-    
-    display: inline-flex;
+.home .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+
 }
     .home .image{
-        width: 80rem;
+        position:relative;
+        align-items:center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home .image::before{
+        content: '';
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        background-image: url(/Contenido/pexels-olya-kobruseva-8962453.jpg);
+        background-size: cover;
+        background-position: top center;
+        opacity: 0.5;
     }
 
         .home .image img{
+            position: relative;
             height: 40rem;
         }
+    
+    .home .text{
+        text-align: center;
+        color: #5AABAF;
+        padding: 3rem 5rem;
+    }
+
+    .home .text h3{
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .home .text h2{
+        font-size: 1.75rem;
+        padding-bottom: 2rem;
+    }
+
+    .home .text h1{
+        font-size: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .home .welcome{
+        color: #008E97;
+        width: 100%;
+        padding-bottom: 4rem;
+        
+    }
+
+        .home .welcome h1{
+            padding: 3rem 10rem;
+            font-size: 2.5rem;
+            font-weight: bolder;
+        }
+
+    .welcome-inner-text{
+        background-color: #6DB4B8;
+        font-size: 1rem;
+        line-height: 2rem;
+        border-radius: 50px;
+        padding: 1.5rem 5rem;
+        text-align: center;
+        color: black;
+        width: 60%;
+        margin:auto;
+    }
+
+.about .grid{
+    display: grid;
+    grid-template-columns: 5fr 2fr ;
+}
+
+.about .text p{
+    padding: 0.5rem 5rem;
+    font-size: 1rem;
+}
+
+.about .image img{
+    width: 45rem;
+}
+    
+    
 
