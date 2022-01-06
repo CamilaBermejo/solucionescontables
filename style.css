@@ -159,6 +159,40 @@ img.logo{
 .about .image img{
     width: 45rem;
 }
-    
-    
+
+.services .text {
+    padding: 0.5rem 5rem;
+    font-size: 1rem;
+}
+
+.services .grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+}
+
+    .services .grid > article{
+        border-color: black;
+        /*text-align: center;
+        align-content: center;*/
+        transition: tranform .3s;
+        width: 15.625rem;
+
+    }
+
+    .card-img{
+        width: 50%;
+    }
+        
+    .img-container{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 12.5rem;
+        height: 12.5rem;
+        background-color: #6DB4B8;
+        border-radius: 50%;
+        margin:auto;
+    }
 
