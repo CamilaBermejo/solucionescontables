@@ -1,10 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
+
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
 * {
   font-family: "Open sans", sans-serif;
   margin: 0;
   padding: 0;
 }
+
 
 .header {
   background-color: #11585d;
@@ -17,10 +25,13 @@
 
 main {
   padding-top: 5rem;
+  min-width: 100%;
+  display: flex;
 }
 
 body {
   font-size: 0.75rem;
+  overflow-x: hidden;
 }
 
 .separator {
@@ -44,23 +55,27 @@ header a {
   align-items: center;
 }
 
-.navigation ul {
+.nav-button{
+  display: none;
+}
+
+.navigation {
   list-style: none;
 }
 
-.navigation ul li {
+.navigation li {
   display: inline-block;
 }
 
-.navigation ul li a {
+.navigation li a {
   display: block;
   padding: 1.3rem 1rem;
-  font-size: 1.5rem;
+  font-size: min(1.8vw, 1.5rem);
   transition: all 0.3s linear;
   border-radius: 3px;
 }
 
-.navigation ul li a:hover {
+.navigation li a:hover {
   background-color: #008f99;
 }
 
@@ -73,6 +88,8 @@ img.logo {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+
 .home .image {
   position: relative;
   align-items: center;
@@ -96,6 +113,8 @@ img.logo {
 .home .image img {
   position: relative;
   height: 40rem;
+  display: block;
+  
 }
 
 .home .text {
@@ -154,27 +173,29 @@ img.logo {
 }
 
 .about .image img {
-  width: 45rem;
+  width: min(50vw, 45rem);
 }
 
 .services .text {
   padding: 0.5rem 5rem;
   font-size: 1rem;
+  text-align: center;
 }
 
 .services .grid {
-  margin: auto;
-  width: max(40rem, 80%);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
-  align-items: center;
+  margin: auto;
+  max-width: min(80%, 100rem);
+  min-width: 0;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-gap: 1rem;
+  
 }
 
 .services .grid > article {
   border-color: black;
-  /*text-align: center;
-        align-content: center;*/
+  text-align: center;
+  align-content: center;
   transition: tranform 0.3s;
   width: 15.625rem;
 }
@@ -188,6 +209,7 @@ img.logo {
 
 .card-img {
   width: 50%;
+  display: block;
 }
 
 .img-container {
@@ -199,4 +221,85 @@ img.logo {
   background-color: #6db4b8;
   border-radius: 50%;
   margin: auto;
+}
+
+@media (max-width: 1024px){
+  .navigation{
+    z-index: 1000;
+    width: 50%;
+    position: fixed;
+    inset: 0 0 0 50%;
+    flex-direction: column;
+    background-color: #11585d;
+    padding: min(20vh, 10rem) 3rem;
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+
+  .navigation[data-visible="true"]{
+    transform: translateX(0%)
+  }
+  
+  .navigation li {
+    display: block;
+  }
+  
+  .navigation li a {
+    display: block;
+    padding: 1.3rem 1rem;
+    font-size: 1.5rem;
+    transition: all 0.3s linear;
+    border-radius: 3px;
+
+  }
+  
+  .navigation li a:hover {
+    background-color: #008f99;
+  }
+
+  .nav-button{
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    background: url("/Contenido/nav-button-hamburger.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 2rem;
+    aspect-ratio: 1;
+    border: 0;
+    top: 1rem;
+    right: 2rem;
+  }
+  
+  .home .grid{
+    grid-template-columns: 1fr;
+  }
+
+  .home .welcome h1 {
+    padding: 3rem 4rem;
+  }
+  
+  .welcome-inner-text {
+    background-color: #6db4b8;
+    font-size: 1rem;
+    line-height: 2rem;
+    border-radius: 50px;
+    padding: 1.5rem 5rem;
+    text-align: center;
+    color: black;
+    width: 80%;
+    margin: auto;
+  }
+
+  .about .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .about .image{
+    margin: auto;
+  }
+  
 }

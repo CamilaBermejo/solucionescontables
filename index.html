@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Soluciones Contables</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="nav.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -17,8 +18,11 @@
             alt="Soluciones Contables"
           />
         </a>
-        <nav class="navigation">
-          <ul>
+
+        <button aria-controls="navigation" aria-expanded="false" class="nav-button"></button>
+
+        <nav">
+          <ul id="navigation" class="navigation" data-visible="false">
             <li><a href="#">Home</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Services</a></li>
