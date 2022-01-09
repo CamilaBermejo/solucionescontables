@@ -230,6 +230,95 @@ img.logo {
   margin: auto;
 }
 
+.contenedor_clientes{
+  margin-bottom: 70px;
+}
+
+  .contenedor_clientes .contenedor_controles{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  
+  .contenedor_clientes .contenedor_controles .indicadores button{
+    background: #C4C4C4;
+    height: 0.188rem;
+    width: 0.625rem;
+    cursor: pointer;
+    border: none;
+    margin-right:0.188rem;
+  }
+
+  .contenedor_clientes .contenedor_controles .indicadores button:hover,
+  .contenedor_clientes .contenedor_controles .indicadores button.activo {
+    background: #008E97;
+  }
+
+  .contenedor_clientes .contenedor_principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .contenedor_clientes .contenedor_principal .flecha_izquierda,
+  .contenedor_clientes .contenedor_principal .flecha_derecha{
+    position: absolute;
+    border: none;
+    font-size: 2.5rem;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 2.5rem;
+    width: 3.125rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: 2s ease all;
+  }
+
+  .contenedor_clientes .contenedor_principal .flecha_izquierda:hover,
+  .contenedor_clientes .contenedor_principal .flecha_derecha:hover{
+    background: rgba(0,0,0,.9);
+  }
+
+  .contenedor_clientes .contenedor_principal .flecha_izquierda{
+    background: url("/Contenido/flecha_izquierda.png");
+    left: 0;
+  }
+
+  .contenedor_clientes .contenedor_principal .flecha_derecha{
+    background: url("/Contenido/flecha_derecha.png");
+    right: 0;
+  }
+
+  .contenedor_clientes .contenedor_carousel{
+    width: 100%;
+    padding: 1.25rem 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .contenedor_clientes .contenedor_carousel .carousel{
+    display: flex;
+    flex-wrap: nowrap; 
+  }
+
+  .contenedor_clientes .contenedor_carousel .carousel .elementos{
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 0.313rem 0.313rem 0.625rem rgba(0, 0, 0, .3);
+  }
+
+  .contenedor_clientes .contenedor_carousel .carousel .elementos img{
+    width: 100%;
+    min-width: 0;
+    vertical-align: top;
+  }
+
+  .contenedor_clientes .contenedor_carousel .carousel .elementos.hover{
+    transform: scale(1.2);
+    transform-origin: center; 
+  }
+
 @media (max-width: 1024px){
   .navigation{
     z-index: 1000;
@@ -331,5 +420,21 @@ img.logo {
   .services .grid .text{
     padding: 1rem 0;
     margin: auto;
+  }
+
+  .contenedor_clientes .contenedor_carousel{
+    overflow: visible;
+  }
+
+  .contenedor_clientes .contenedor_carousel .carousel{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .contenedor_clientes .indicadores,
+  .contenedor_clientes .flecha_izquierda,
+  .contenedor_clientes .flecha_derecha {
+    display: none;
   }
 }
