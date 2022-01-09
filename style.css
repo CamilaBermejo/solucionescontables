@@ -49,6 +49,10 @@ div.separator {
   align-items: center;
 }
 
+header{
+  z-index: 100;
+}
+
 header a {
   color: #d9d9d9;
   text-decoration: none;
@@ -100,6 +104,7 @@ img.logo {
 .home .image::before {
   content: "";
   position: absolute;
+  z-index: 0;
   right: 0px;
   top: 0px;
   left: 0px;
@@ -111,6 +116,7 @@ img.logo {
 }
 
 .home .image img {
+  z-index: 0;
   position: relative;
   height: 40rem;
   display: block;
@@ -198,6 +204,7 @@ img.logo {
   align-content: center;
   transition: tranform 0.3s;
   width: 15.625rem;
+  margin: auto;
 }
 
 .card .text {
@@ -226,9 +233,9 @@ img.logo {
 @media (max-width: 1024px){
   .navigation{
     z-index: 1000;
-    width: 50%;
+    width: 70%;
     position: fixed;
-    inset: 0 0 0 50%;
+    inset: 0 0 0 30%;
     flex-direction: column;
     background-color: #11585d;
     padding: min(20vh, 10rem) 3rem;
@@ -248,7 +255,7 @@ img.logo {
   .navigation li a {
     display: block;
     padding: 1.3rem 1rem;
-    font-size: 1.5rem;
+    font-size: min(6vw,1.5rem);
     transition: all 0.3s linear;
     border-radius: 3px;
 
@@ -283,23 +290,46 @@ img.logo {
   
   .welcome-inner-text {
     background-color: #6db4b8;
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 2rem;
     border-radius: 50px;
-    padding: 1.5rem 5rem;
+    padding: 1.5rem 2rem;
     text-align: center;
     color: black;
     width: 80%;
     margin: auto;
   }
 
+  .home .text{
+    padding: inherit 1rem;
+    font-size: 16px;
+  }
+
   .about .grid {
     display: grid;
     grid-template-columns: 1fr;
+    align-items: center;
   }
 
+  .about .text{
+    font-size: 16px;
+    padding: inherit 1rem;
+  }
   .about .image{
     margin: auto;
   }
-  
+
+  .services .grid article{
+    width: 10rem;
+  }
+
+  .services .grid .img-container{
+    width: 8rem;
+    height: 8rem
+  }
+
+  .services .grid .text{
+    padding: 1rem 0;
+    margin: auto;
+  }
 }
