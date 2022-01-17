@@ -13,22 +13,22 @@
 }
 
 .header {
+  position: sticky;
   background-color: #11585d;
   width: 100%;
-  position: fixed;
   left: 0;
   top: 0;
   z-index: 1;
 }
 
 main {
-  padding-top: 5rem;
   min-width: 100%;
   display: flex;
 }
 
 body {
   font-size: 0.75rem;
+  min-width: fit-content;
   overflow-x: hidden;
   background-color: white;
 }
@@ -407,7 +407,7 @@ img.logo {
 
   .navigation li a {
     display: block;
-    padding: 1.3rem 1rem;
+    padding: min(1.3rem, 2vh) 1rem;
     font-size: min(6vw, 1.5rem);
     transition: all 0.3s linear;
     border-radius: 3px;
