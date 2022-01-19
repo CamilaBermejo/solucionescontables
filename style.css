@@ -18,12 +18,13 @@
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 100;
 }
 
 main {
-  min-width: 100%;
+  width: min(100%, 1920px);
   display: flex;
+  margin: auto;
 }
 
 body {
@@ -83,7 +84,7 @@ header a {
 }
 
 img.logo {
-  height: 3.5rem;
+  height: 4rem;
   padding: 0.7rem;
 }
 
@@ -102,7 +103,6 @@ img.logo {
 .home .image::before {
   content: "";
   position: absolute;
-  z-index: 0;
   right: 0px;
   top: 0px;
   left: 0px;
@@ -114,7 +114,6 @@ img.logo {
 }
 
 .home .image img {
-  z-index: 0;
   position: relative;
   height: 40rem;
   display: block;
@@ -267,7 +266,7 @@ img.logo {
   width: 3.125rem;
   color: #fff;
   cursor: pointer;
-  z-index: 500;
+  z-index: 50;
 }
 
 .contenedor_clientes .contenedor_principal .flecha_izquierda:hover,
@@ -331,7 +330,7 @@ img.logo {
   width: 100%;
   text-align: center;
   font-weight: bolder;
-  font-size: max(16px, 1.3vw);
+  font-size: clamp(16px, 1.3vw, 32px);
   display: none;
 }
 
@@ -358,7 +357,7 @@ img.logo {
   padding: 2rem 3rem;
   width: min(60rem, 80%);
   color: white;
-  font-size: max(16px, 1vw);
+  font-size: clamp(16px, 1vw, 32px);
   margin: 3rem auto;
 }
 
@@ -375,7 +374,7 @@ img.logo {
 .testimonie .grid p {
   font-weight: bold;
   font-style: italic;
-  padding: 0 2rem;
+  padding: 1em 2rem;
 }
 
 .testimonie .author p {
