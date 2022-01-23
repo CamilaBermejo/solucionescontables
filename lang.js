@@ -1,51 +1,17 @@
 const data = {
-    "english":{
+    "english": {
         "navHome": "Home",
         "navAbout": "About Us",
         "navServ": "Services",
         "navClients": "Clients/Industries",
         "navTest": "Testimonies",
         "navContact": "Contact",
-        "home1": "We provide more than numbers. The accounting that we do is a way of making their business more intelligent, efficient and reliable. Our big array of services allow us to offer a solution package that goes way beyond bookkeeping. From Business Formation and Law Compliance to Financial Statements and Total Quality Management. ",
-        "home2": "We want to be their ally and confident. Because we know that if our clients succeed, we succeed too.",
+        "home1": "We provide more than numbers. The accounting that we do is a way of making your business more intelligent, efficient and reliable. Our big array of services allow us to offer a solution package that goes way beyond bookkeeping. We are experts in Total Quality Management and it is our habit to simplify processes and provide valuable information for the growth of your business.",
+        "home2": "We want to be your ally and confident. Because we know that if our clients succeed, we succeed too.",
         "home3": "We only have one agenda: YOURS.",
-        "welcome1": "Welcome",
-        "welcome2": "We are a team of Accountants and Business Administrators experts in providing solutions to small and big organizations. Our mission is to organize them and to take charge of their accounting and administrative needs so they can focus on what they do best.",
-        "about1": "Soy una mujer latina viviendo en USA. Contadora y madre de dos hijos entre otras cosas. Este negocio comenzó tímido recién mudada a California en 2013 y estalló a principios de 2020 cuando la situación nos obligó a atrincherarnos en casa.",
-        "about2": "Siempre fue mi sueño disponer de flexibilidad de tiempo y espacio y hoy ese sueño se volvió realidad.",
-        "about3": "A Soluciones Contables no le importan las formalidades ni los horarios. A veces trabajamos en pijamas, otras veces contestamos mails desde el baño. La rigidez que era moneda corriente quedó en el pasado ya que nuestro único propósito es satisfacer las necesidades contables de nuestros clientes de raíz y de inmediato.",
-        "about4": "Nos importa el bienestar de nuestros clientes ; no solo su éxito económico sino también personal; porque creemos que solo así podemos aportar algo valioso a la sociedad. Amamos facilitarles la vida y para eso hacemos lo que mejor sabemos hacer de forma honesta y profesional.",
-        "about5": "Nuestro equipo está compuesto por CPAs y analistas especialistas en Calidad Total lo que nos ubica por encima de un simple tenedor de libros.",
-        "about6": "La felicidad de nuestros colaboradores es la nuestra y por eso cuentan con esa misma flexibilidad. Sus aportes son tan valiosos como los míos, por eso sus honorarios son más que competitivos en el país donde residen.",
-        "about7": "En nuestro caso el Covid incentivo una manera de trabajar que nos da mas libertad, éxito y felicidad a todas las partes involucradas. De eso estamos orgullosos y súper agradecidos y alentamos a que cada vez mas equipos de trabajo hagan lo mismo.",
-        "about8": "Siendo Madre esto es más que un éxito. Puedo ver crecer mi profesión en una empresa que aporta resultados tan demandados mientras acompaño desde mi casa; con mi tiempo y presencia el crecimiento de mis hijos.",
-        "about9": "Por lo cual estoy super agradecida y orgullosa.<",
-        "about10": "Y a ti ¿En qué podemos apoyarte?",
-        "about11": "Soluciones Contables San Diego is a group of accountants and analysts experts in providing Solutions for small and big businesses.",
-        "about12": "We love to see our clients thrive and we are happy to work with all kind of clients and industries. Specifically; we are proud to work along the Hispanic community in which we belong and that’s the reason of our name in Spanish ´Accounting Solutions San Diego´",
+        "about1": "About Us",
+        "about2": "We are a team of Accountants and Business Administrators with more than 10 years of experience assisting Businesses in different industries. Since 2013 we have provided more organization, profitability and peace of mind to the teams that choose us.",
         "serv1": "We specialize in bookkeeping and total quality management. Our goal is to smooth the accounting processes and to provide audited Financial statements to be ready for Tax season and Loan Applications.",
-        "serv2": "Accounting For Income Taxes",
-        "serv3": "Monthly Bookkeeping",
-        "serv4": "Dedicated Bookkeeping Expert",
-        "serv5": "Monthly and Quarterly Close",
-        "serv6": "Year-end tax ready financial statements",
-        "serv7": "Direct, unlimited comunication with our in-house team",
-        "serv8": "Customer and Client Invoicing",
-        "serv9": "Bill Payments",
-        "serv10": "Payroll",
-        "serv11": "Bank Reconciliations",
-        "serv12": "Tax Strategy",
-        "serv13": "Technical Accounting",
-        "serv14": "Journal Entry Processing",
-        "serv15": "GAAP standard Implementation",
-        "serv16": "Software Implementation & Automating",
-        "serv17": "Accounts Receivable",
-        "serv18": "Accounts Payable",
-        "serv19": "Financial Statements and reports",
-        "serv20": "Internal Comunication",
-        "serv21": "State Registration",
-        "serv22": "Cash flow Management",
-        "serv23": "Total Quality Management",
         "client1": "Architecture",
         "client2": "Care Giving",
         "client3": "Diamond Wholeselers",
@@ -58,66 +24,39 @@ const data = {
         "client10": "Non Profits",
         "test1": "I have worked with Romina for the last year, and it has been a blessing. I have always struggled with my books, now I just email her what I want and need and she gets everything back super fast and clear. I just wish I had met her sooner so I had more time to grow my business.",
         "test2": "It's hard to imagine my company without Soluciones Contables -- they've become that essential. Romina and her team are so responsive, it's like they're right there in the office, working at my side. As a small business owner, I have to trust my bookkeeper for almost everything. Whenever I need help, I know I can always turn to Soluciones Contables. They are a natural extension of my operation.",
+        "sepServices": "/Contenido/Separators/SeparadorServices.png",
+        "sepClients": "/Contenido/Separators/SeparadorClientes.png",
+        "sepTestimonies": "/Contenido/Separators/SeparadorTestimonies.png",
+
     },
-    "spanish":{
+    "spanish": {
         "navHome": "Home",
-        "navAbout": "Acerca de",
+        "navAbout": "Sobre Nosotros",
         "navServ": "Servicios",
         "navClients": "Clientes/Industrias",
         "navTest": "Testimonios",
         "navContact": "Contacto",
-        "home1": "We provide more than numbers. The accounting that we do is a way of making their business more intelligent, efficient and reliable. Our big array of services allow us to offer a solution package that goes way beyond bookkeeping. From Business Formation and Law Compliance to Financial Statements and Total Quality Management. ",
-        "home2": "We want to be their ally and confident. Because we know that if our clients succeed, we succeed too.",
+        "home1": "La contabilidad que ofrecemos es más que números, es una forma de hacer que tu negocio sea más inteligente, eficiente y confiable. Nuestro gran rango de servicios nos permite ofrecer un paquete de solución integral mucho más  completo que un tenedor de libros. Somos expertos en Calidad Total. Es nuestra forma simplificar procesos y proveer información valiosa para el crecimiento de tu negocio. ",
+        "home2": "Queremos ser tus aliados y confidentes. Porque sabemos que si a nuestros clientes les va bien, a nosotros nos va bien.",
         "home3": "We only have one agenda: YOURS.",
-        "welcome1": "Welcome",
-        "welcome2": "We are a team of Accountants and Business Administrators experts in providing solutions to small and big organizations. Our mission is to organize them and to take charge of their accounting and administrative needs so they can focus on what they do best.",
-        "about1": "Soy una mujer latina viviendo en USA. Contadora y madre de dos hijos entre otras cosas. Este negocio comenzó tímido recién mudada a California en 2013 y estalló a principios de 2020 cuando la situación nos obligó a atrincherarnos en casa.",
-        "about2": "Siempre fue mi sueño disponer de flexibilidad de tiempo y espacio y hoy ese sueño se volvió realidad.",
-        "about3": "A Soluciones Contables no le importan las formalidades ni los horarios. A veces trabajamos en pijamas, otras veces contestamos mails desde el baño. La rigidez que era moneda corriente quedó en el pasado ya que nuestro único propósito es satisfacer las necesidades contables de nuestros clientes de raíz y de inmediato.",
-        "about4": "Nos importa el bienestar de nuestros clientes ; no solo su éxito económico sino también personal; porque creemos que solo así podemos aportar algo valioso a la sociedad. Amamos facilitarles la vida y para eso hacemos lo que mejor sabemos hacer de forma honesta y profesional.",
-        "about5": "Nuestro equipo está compuesto por CPAs y analistas especialistas en Calidad Total lo que nos ubica por encima de un simple tenedor de libros.",
-        "about6": "La felicidad de nuestros colaboradores es la nuestra y por eso cuentan con esa misma flexibilidad. Sus aportes son tan valiosos como los míos, por eso sus honorarios son más que competitivos en el país donde residen.",
-        "about7": "En nuestro caso el Covid incentivo una manera de trabajar que nos da mas libertad, éxito y felicidad a todas las partes involucradas. De eso estamos orgullosos y súper agradecidos y alentamos a que cada vez mas equipos de trabajo hagan lo mismo.",
-        "about8": "Siendo Madre esto es más que un éxito. Puedo ver crecer mi profesión en una empresa que aporta resultados tan demandados mientras acompaño desde mi casa; con mi tiempo y presencia el crecimiento de mis hijos.",
-        "about9": "Por lo cual estoy super agradecida y orgullosa.<",
-        "about10": "Y a ti ¿En qué podemos apoyarte?",
-        "about11": "Soluciones Contables San Diego is a group of accountants and analysts experts in providing Solutions for small and big businesses.",
-        "about12": "We love to see our clients thrive and we are happy to work with all kind of clients and industries. Specifically; we are proud to work along the Hispanic community in which we belong and that’s the reason of our name in Spanish ´Accounting Solutions San Diego´",
-        "serv1": "We specialize in bookkeeping and total quality management. Our goal is to smooth the accounting processes and to provide audited Financial statements to be ready for Tax season and Loan Applications.",
-        "serv2": "Accounting For Income Taxes",
-        "serv3": "Monthly Bookkeeping",
-        "serv4": "Dedicated Bookkeeping Expert",
-        "serv5": "Monthly and Quarterly Close",
-        "serv6": "Year-end tax ready financial statements",
-        "serv7": "Direct, unlimited comunication with our in-house team",
-        "serv8": "Customer and Client Invoicing",
-        "serv9": "Bill Payments",
-        "serv10": "Payroll",
-        "serv11": "Bank Reconciliations",
-        "serv12": "Tax Strategy",
-        "serv13": "Technical Accounting",
-        "serv14": "Journal Entry Processing",
-        "serv15": "GAAP standard Implementation",
-        "serv16": "Software Implementation & Automating",
-        "serv17": "Accounts Receivable",
-        "serv18": "Accounts Payable",
-        "serv19": "Financial Statements and reports",
-        "serv20": "Internal Comunication",
-        "serv21": "State Registration",
-        "serv22": "Cash flow Management",
-        "serv23": "Total Quality Management",
-        "client1": "Architecture",
-        "client2": "Care Giving",
-        "client3": "Diamond Wholeselers",
-        "client4": "Professional Services",
-        "client5": "Liquor Wholesalers",
-        "client6": "Tax Consulting",
-        "client7": "Logistic & Distribution",
-        "client8": "Digital Marketing",
-        "client9": "Retailers",
-        "client10": "Non Profits",
+        "about1": "Sobre Nosotros",
+        "about2": "SCSD es un equipo de Contadores públicos y Licenciados en Administración con más de 10 años de experiencia apoyando a pequeñas y medianas empresas de diversos rubros. Desde 2013 estamos aportando mayor organización, rentabilidad y tranquilidad a los equipos que nos eligen.",
+        "serv1": "Nos especializamos en contabilidad y gestión de calidad total. Nuestro objetivo es suavizar los procesos contables y proporcionar estados financieros auditados para estar listos para la temporada de impuestos y las solicitudes de préstamos.",
+        "client1": "Arquitectura",
+        "client2": "Cuidados",
+        "client3": "Mayorista Diamantes",
+        "client4": "Servicios Profesionales",
+        "client5": "Mayorista Licores",
+        "client6": "Consultoría fiscal",
+        "client7": "Logística y Distribución",
+        "client8": "Marketing Digital",
+        "client9": "Minoristas",
+        "client10": "Sin fines de lucro",
         "test1": "I have worked with Romina for the last year, and it has been a blessing. I have always struggled with my books, now I just email her what I want and need and she gets everything back super fast and clear. I just wish I had met her sooner so I had more time to grow my business.",
         "test2": "It's hard to imagine my company without Soluciones Contables -- they've become that essential. Romina and her team are so responsive, it's like they're right there in the office, working at my side. As a small business owner, I have to trust my bookkeeper for almost everything. Whenever I need help, I know I can always turn to Soluciones Contables. They are a natural extension of my operation.",
+        "sepServices": "/Contenido/Separators/SeparadorServiciosEs.png",
+        "sepClients": "/Contenido/Separators/SeparadorClientesEs.png",
+        "sepTestimonies": "/Contenido/Separators/SeparadorTestimoniosEs.png",
     },
 }
 
@@ -130,52 +69,65 @@ const navContact = document.getElementById("navContact");
 const home1 = document.getElementById("home1");
 const home2 = document.getElementById("home2");
 const home3 = document.getElementById("home3");
-const welcome1 = document.getElementById("welcome1");
-const welcome2 = document.getElementById("welcome2");
-const about1 = document.getElementById();
-const about2 = document.getElementById();
-const about3 = document.getElementById();
-const about4 = document.getElementById();
-const about5 = document.getElementById();
-const about6 = document.getElementById();
-const about7 = document.getElementById();
-const about8 = document.getElementById();
-const about9 = document.getElementById();
-const about10 = document.getElementById();
-const about11 = document.getElementById();
-const about12 = document.getElementById();
-const serv1 = document.getElementById();
-const serv2 = document.getElementById();
-const serv3 = document.getElementById();
-const serv4 = document.getElementById();
-const serv5 = document.getElementById();
-const serv6 = document.getElementById();
-const serv7 = document.getElementById();
-const serv8 = document.getElementById();
-const serv9 = document.getElementById();
-const serv10 = document.getElementById();
-const serv11 = document.getElementById();
-const serv12 = document.getElementById();
-const serv13 = document.getElementById();
-const serv14 = document.getElementById();
-const serv15 = document.getElementById();
-const serv16 = document.getElementById();
-const serv17 = document.getElementById();
-const serv18 = document.getElementById();
-const serv19 = document.getElementById();
-const serv20 = document.getElementById();
-const serv21 = document.getElementById();
-const serv22 = document.getElementById();
-const serv23 = document.getElementById();
-const client1 = document.getElementById();
-const client2 = document.getElementById();
-const client3 = document.getElementById();
-const client4 = document.getElementById();
-const client5 = document.getElementById();
-const client6 = document.getElementById();
-const client7 = document.getElementById();
-const client8 = document.getElementById();
-const client9 = document.getElementById();
-const client10 = document.getElementById();
-const test1 = document.getElementById();
-const test2 = document.getElementById();
+const about1 = document.getElementById("welcome1");
+const about2 = document.getElementById("welcome2");
+const serv1 = document.getElementById("serv1");
+const client1 = document.getElementById("client1");
+const client2 = document.getElementById("client2");
+const client3 = document.getElementById("client3");
+const client4 = document.getElementById("client4");
+const client5 = document.getElementById("client5");
+const client6 = document.getElementById("client6");
+const client7 = document.getElementById("client7");
+const client8 = document.getElementById("client8");
+const client9 = document.getElementById("client9");
+const client10 = document.getElementById("client10");
+const test1 = document.getElementById("test1");
+const test2 = document.getElementById("test2");
+const toggle = document.getElementById("language-toggle");
+const sepServices = document.getElementById("services");
+const sepClients = document.getElementById("clients");
+const sepTestimonies = document.getElementById("testimonies");
+
+//translate("english");
+
+toggle.addEventListener("click", () => {
+    if (toggle.checked == true) {
+        translate("english");
+    }
+    else {
+        translate("spanish");
+    }
+})
+
+
+function translate(language) {
+    navHome.textContent = data[language].navHome;
+    navAbout.textContent = data[language].navAbout;
+    navServ.textContent = data[language].navServ;
+    navClients.textContent = data[language].navClients;
+    navTest.textContent = data[language].navTest;
+    navContact.textContent = data[language].navContact;
+    home1.textContent = data[language].home1;
+    home2.textContent = data[language].home2;
+    home3.textContent = data[language].home3;
+    about1.textContent = data[language].about1;
+    about2.textContent = data[language].about2;
+    serv1.textContent = data[language].serv1;
+    client1.textContent = data[language].client1;
+    client2.textContent = data[language].client2;
+    client3.textContent = data[language].client3;
+    client4.textContent = data[language].client4;
+    client5.textContent = data[language].client5;
+    client6.textContent = data[language].client6;
+    client7.textContent = data[language].client7;
+    client8.textContent = data[language].client8;
+    client9.textContent = data[language].client9;
+    client10.textContent = data[language].client10;
+    test1.textContent = data[language].test1;
+    test2.textContent = data[language].test2;
+    sepServices.setAttribute("src", data[language].sepServices);
+    sepClients.setAttribute("src", data[language].sepClients);
+    sepTestimonies.setAttribute("src", data[language].sepTestimonies);
+}
+

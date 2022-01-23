@@ -22,13 +22,19 @@
 
         <button aria-controls="navigation" aria-expanded="false" class="nav-button"></button>
 
+        <div class="language-toggle">
+          <input id="language-toggle" type="checkbox" checked="true">
+          <label for="language-toggle" class="englishbtn" language="english">EN</label>
+          <label for="language-toggle" class="spanishbtn" >ES</label>
+        </div>
+        
         <nav">
           <ul id="navigation" class="navigation" data-visible="false">
             <li><a id="navHome" href="#">Home</a></li>
             <li><a id="navAbout" href="#about">About Us</a></li>
             <li><a id="navServ" href="#services">Services</a></li>
             <li><a id="navClients" href="#clients">Clients/Industries</a></li>
-            <li><a id="navTest" href="#Testimonies">Testimonies</a></li>
+            <li><a id="navTest" href="#testimonies">Testimonies</a></li>
             <li><a id="navContact" href="#">Contact</a></li>
           </ul>
         </nav>
@@ -44,41 +50,25 @@
             </div>
             <div class="text">
               <h3 id="home1">
-                La contabilidad que ofrecemos es más que números, es una forma
-                de hacer que su negocio sea más inteligente, productivo y
-                confiable. Nuestro gran rango de servicios nos permite ofrecer
-                un paquete de solución integral mucho más completo que un
-                tenedor de libros. Somos expertos en Calidad Total y nos encanta
-                valernos de ella para ordenar los procesos y crear
-                procedimientos claros y fáciles capaces de ser seguidos por
-                cualquier miembro de la organización.
+                We provide more than numbers. The accounting that we do is a way of making your business more intelligent, efficient and reliable. Our big array of services allow us to offer a solution package that goes way beyond bookkeeping. We are experts in Total Quality Management and it is our habit to simplify processes and provide valuable information for the growth of your business.
               </h3>
               <h2 id="home2">
-                Queremos ser sus aliados y confidentes. Porque sabemos que si a
-                nuestros clientes les va bien, a nosotros nos va bien.
+                We want to be your ally and confident. Because we know that if our clients succeed, we succeed too.
               </h2>
               <h1 id="home3">We only have one agenda: YOURS.</h1>
             </div>
           </div>
 
-          <div class="welcome">
-            <h1 id="welcome1">Welcome</h1>
+          <div id="about" class="welcome">
+            <h1 id="welcome1">About Us</h1>
             <div class="welcome-inner-text">
               <p id="welcome2">
-                En SCSD somos un grupo de contadores y analistas expertos en
-                brindar soluciones tanto a pequeñas como a grandes empresas,
-                asistiendo a nuestros clientes de manera remota en su actividad
-                diaria. Nuestra misión es organizarlos y hacernos cargo de todas
-                sus necesidades contables para que ellos puedan dedicarse a lo
-                que les apasiona y así poder crecer su negocio. Convertimos sus
-                datos en información valiosa para la toma de decisiones
-                conscientes. Contando con reportería y estados actualizados a
-                demanda.
+                We are a team of Accountants and Business Administrators with more than 10 years of experience assisting Businesses in different industries. Since 2013 we have provided more organization, profitability and peace of mind to the teams that choose us.
               </p>
             </div>
           </div>
         </div>
-        <div class="about">
+        <!--<div class="about">
           <div class="separator">
             <img
               id="about"
@@ -156,10 +146,11 @@
               <img src="/Contenido//Utils/Selecting-team-bro.png" alt="" />
             </div>
           </div>
-        </div>
-        <div id="services" class="services">
+        </div> -->
+        <div class="services">
           <div class="separator">
             <img
+              id="services"
               class="separator"
               src="/Contenido/Separators/SeparadorServices.png"
               alt=""
@@ -200,14 +191,6 @@
                 </article>
                 <article class="card">
                   <div class="img-container">
-                    <img class="card-img" src="/Contenido/Services/expert.png" alt="" />
-                  </div>
-                  <div class="text">
-                    <h3 id="serv4">Dedicated bookkeeping expert</h3>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="img-container">
                     <img
                       class="card-img"
                       src="/Contenido/Services/monthlyclose.png"
@@ -215,33 +198,7 @@
                     />
                   </div>
                   <div class="text">
-                    <h3 id="serv5">Monthly and Quarterly Close</h3>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="img-container">
-                    <img
-                      class="card-img"
-                      src="/Contenido/Services/yearEndTaxes.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="text">
-                    <h3 id="serv6">Year-end tax ready financial statements</h3>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="img-container">
-                    <img
-                      class="card-img"
-                      src="/Contenido/Services/comunication.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="text">
-                    <h3 id="serv7">
-                      Direct, unlimited communication with our in-house team
-                    </h3>
+                    <h3 id="serv5">Quarterly and Yearly End Close</h3>
                   </div>
                 </article>
                 <article class="card">
@@ -249,15 +206,31 @@
                     <img class="card-img" src="/Contenido/Services/invoice.png" alt="" />
                   </div>
                   <div class="text">
-                    <h3 id="serv8">Customer and Client Invoicing</h3>
+                    <h3 id="serv8">Client Invoicing</h3>
                   </div>
                 </article>
                 <article class="card">
                   <div class="img-container">
-                    <img class="card-img" src="/Contenido/Services/bill.png" alt="" />
+                    <img
+                      class="card-img"
+                      src="/Contenido/Services/receive-money.png"
+                      alt=""
+                    />
                   </div>
                   <div class="text">
-                    <h3 id="serv9">Bill Payments</h3>
+                    <h3 id="serv17">Accounts Receivable</h3>
+                  </div>
+                </article>
+                <article class="card">
+                  <div class="img-container">
+                    <img
+                      class="card-img"
+                      src="/Contenido/Services/payable.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text">
+                    <h3 id="serv18">Accounts Payable</h3>
                   </div>
                 </article>
                 <article class="card">
@@ -289,39 +262,7 @@
                     />
                   </div>
                   <div class="text">
-                    <h3 id="serv12">Tax Strategy</h3>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="img-container">
-                    <img
-                      class="card-img"
-                      src="/Contenido/Services/accounting.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="text">
-                    <h3 id="serv13">Technical Accounting</h3>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="img-container">
-                    <img
-                      class="card-img"
-                      src="/Contenido/Services/journal-book.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="text">
-                    <h3 id="serv14">Journal Entry Processing</h3>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="img-container">
-                    <img class="card-img" src="/Contenido/Services/GAAP.png" alt="" />
-                  </div>
-                  <div class="text">
-                    <h3 id="serv15">GAAP Standard Implementation</h3>
+                    <h3 id="serv12">Tax Strategy and Filing</h3>
                   </div>
                 </article>
                 <article class="card">
@@ -333,31 +274,7 @@
                     />
                   </div>
                   <div class="text">
-                    <h3 id="serv16">Software Implementation & automating</h3>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="img-container">
-                    <img
-                      class="card-img"
-                      src="/Contenido/Services/receive-money.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="text">
-                    <h3 id="serv17">Accounts Receivable</h3>
-                  </div>
-                </article>
-                <article class="card">
-                  <div class="img-container">
-                    <img
-                      class="card-img"
-                      src="/Contenido/Services/payable.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="text">
-                    <h3 id="serv18">Accounts Payable</h3>
+                    <h3 id="serv16">Accounting Software Implementation & automating</h3>
                   </div>
                 </article>
                 <article class="card">
@@ -376,24 +293,24 @@
                   <div class="img-container">
                     <img
                       class="card-img"
-                      src="/Contenido/Services/internal.png"
+                      src="/Contenido/Services/registration-form.png"
                       alt=""
                     />
                   </div>
                   <div class="text">
-                    <h3 id="serv20">Internal Communication</h3>
+                    <h3 id="serv21">Federal/State Registration</h3>
                   </div>
                 </article>
                 <article class="card">
                   <div class="img-container">
                     <img
                       class="card-img"
-                      src="/Contenido/Services/registration-form.png"
+                      src="/Contenido/Services/loan-aplication.png"
                       alt=""
                     />
                   </div>
                   <div class="text">
-                    <h3 id="serv21">State Registration</h3>
+                    <h3 id="serv21">Loan Aplications</h3>
                   </div>
                 </article>
                 <article class="card">
@@ -420,11 +337,35 @@
                     <h3 id="serv23">Total Quality Management</h3>
                   </div>
                 </article>
+                <article class="card">
+                  <div class="img-container">
+                    <img
+                      class="card-img"
+                      src="/Contenido/Services/business-plan.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text">
+                    <h3 id="serv21">Business Plan Development</h3>
+                  </div>
+                </article>
+                <article class="card">
+                  <div class="img-container">
+                    <img
+                      class="card-img"
+                      src="/Contenido/Services/business-formation.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text">
+                    <h3 id="serv21">Business Formation</h3>
+                  </div>
+                </article>
               </main>
             </div>
           </div>
         </div>
-        <div id="Clients" class="Clients">
+        <div class="Clients">
           <div class="separator">
             <img
               id="clients"
@@ -469,7 +410,7 @@
                   </div>
                   <div class="elementos">
                     <img src="/Contenido/Clients/logistic.jpg" alt="">
-                    <p id="cclient7">Logistic & Distribution</p>
+                    <p id="client7">Logistic & Distribution</p>
                   </div>
                   <div class="elementos">
                     <img src="/Contenido/Clients/digital-marketing.jpg" alt="">
@@ -491,9 +432,9 @@
             </div>
           </div>
         </div>
-        <div id="Testimonies" class="testimonies">
+        <div class="testimonies">
           <div class="separator">
-            <img class="separator" src="/Contenido/Separators/SeparadorTestimonies.png" alt="">
+            <img id="testimonies" class="separator" src="/Contenido/Separators/SeparadorTestimonies.png" alt="">
           </div>
           <div class="testimonies-container">
             <article class="testimonie">

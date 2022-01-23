@@ -12,6 +12,11 @@
   padding: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; 
+}
+
 .header {
   position: sticky;
   background-color: #11585d;
@@ -41,6 +46,68 @@ body {
 div.separator {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.language-toggle {
+  position: relative;
+  display: inline;
+  flex-grow: 4;
+  justify-content: right;
+  margin-left: 2rem;
+}
+
+.language-toggle label {
+  position: absolute;
+  font-weight: 600;
+  pointer-events: none;  
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.englishbtn {
+  bottom: 10px;
+  left: 15px;
+}
+
+.spanishbtn {
+  bottom: 10px;
+  left: 65px;
+}
+
+.language-toggle input[type="checkbox"]{
+  position: relative;
+  width: 100px;
+  height: 40px;
+  background: #6db4b8;
+  -webkit-appearance: none;
+  border-radius: 20px;
+  outline: none;
+  transition: .4s;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.language-toggle input[type="checkbox"]::before{
+  z-index: 100;
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: .4s;
+}
+
+.language-toggle input:checked[type="checkbox"]{
+  background: #6db4b8;
+}
+
+.language-toggle input:checked[type="checkbox"]::before {
+  left: 60px;
+  transition: .4s;
 }
 
 .logo-nav-container {
@@ -179,8 +246,8 @@ img.logo {
 }
 
 .services .text {
-  padding: 0.5rem 5rem;
-  font-size: 1rem;
+  padding: 2rem 5rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -202,11 +269,17 @@ img.logo {
   margin: auto;
 }
 
-.card .text {
+.card .text h3{
   font-size: 0.8rem;
   text-align: center;
-  height: 6rem;
-  margin: auto;
+  height: 5rem;
+  width: 100px;
+}
+
+.card .text {
+  padding: 1rem 0;
+  text-align: justify;
+  display: inline-block;
 }
 
 .card-img {
@@ -430,6 +503,8 @@ img.logo {
     top: 1rem;
     right: 2rem;
   }
+
+  
 
   .home .grid {
     grid-template-columns: 1fr;
