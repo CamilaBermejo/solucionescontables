@@ -458,8 +458,7 @@ img.logo {
 
 .contactUs .contact{
   position: relative;
-  min-height: 100vh;
-  padding:  100px;
+  min-height: 6.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -471,7 +470,7 @@ img.logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 
 .conteiner_contact .contact_info {
@@ -482,13 +481,13 @@ img.logo {
 
 .conteiner_contact .contact_info .box{
   position: relative;
-  padding: 20px 0;
+  padding: 1.25rem 0;
   display: flex;
 }
 
 .conteiner_contact .contact_info .box .icon{
-  min-width: 60px;
-  height: 60px;
+  min-width: 3.75rem;
+  height: 3.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
