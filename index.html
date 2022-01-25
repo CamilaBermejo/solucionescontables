@@ -35,7 +35,7 @@
             <li><a id="navServ" href="#services">Services</a></li>
             <li><a id="navClients" href="#clients">Clients/Industries</a></li>
             <li><a id="navTest" href="#testimonies">Testimonies</a></li>
-            <li><a id="navContact" href="#">Contact</a></li>
+            <li><a id="navContact" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -59,8 +59,15 @@
             </div>
           </div>
 
+          <div class="separator">
+            <img
+              id="about"
+              class="separator"
+              src="/Contenido/Separators/SeparadorAboutUs.png"
+              alt=""
+            />
+          </div>
           <div id="about" class="welcome">
-            <h1 id="welcome1">About Us</h1>
             <div class="welcome-inner-text">
               <p id="welcome2">
                 We are a team of Accountants and Business Administrators with more than 10 years of experience assisting Businesses in different industries. Since 2013 we have provided more organization, profitability and peace of mind to the teams that choose us.
@@ -157,12 +164,6 @@
             />
           </div>
           <div>
-            <div id="serv1" class="text">
-              We specialize in bookkeeping and total quality management. Our
-              goal is to smooth the accounting processes and to provide audited
-              Financial statements to be ready for Tax season and Loan
-              Applications.
-            </div>
             <div class="container">
               <main class="grid">
                 <article class="card">
@@ -478,8 +479,8 @@
                     <img src="/Contenido/Utils/email.png" alt="">
                   </div>
                   <div class="text">
-                    <h3>Address</h3>
-                    <p>Calle</p>
+                    <h3 id="contact1">Address</h3>
+                    <p>1988 1/2 Via Pamela</p>
                   </div>
                 </div>
                 <div class="box">
@@ -487,8 +488,8 @@
                     <img src="/Contenido/Utils/email.png" alt="">
                   </div>
                   <div class="text">
-                    <h3>Phone</h3>
-                    <p>5488701</p>
+                    <h3 id="contact2">Phone</h3>
+                    <p>(707) 497-8153</p>
                   </div>
                 </div>
                 <div class="box">
@@ -497,27 +498,31 @@
                   </div>
                   <div class="text">
                     <h3>Email</h3>
-                    <p>besaca@gmail.com</p>
+                    <p>solucionescontablessandiego@gmail.com</p>
                   </div>
                 </div>
               </div>
               <div class="contact_form">
-                <form>
-                  <h2>Send Message</h2>
+                <form onsubmit="event.preventDefault(); validateForm()">
+                  <h2 id="contact3">How can we help you?</h2>
                   <div class="input_box">
-                    <input type="text" required="required">
-                    <span>Full Name</span>
+                    <input id="name" type="text" required="required">
+                    <span id="contact4">Full Name</span>
+                    <small class="error"></small>
                   </div>
                   <div class="input_box">
-                    <input type="text" required="required">
+                    <input  id="email" type="text" required="required">
                     <span>Email</span>
+                    <small class="error"></small>
                   </div>
                   <div class="input_box">
-                    <textarea required="required"></textarea>
-                    <span>Type your Message...</span>
+                    <textarea id="message" required="required"></textarea>
+                    <span id="contact5">Type your Message...</span>
+                    <small class="error"></small>
                   </div>
                   <div class="input_box">
-                    <input type="submit" value="Send">
+                    <input id="contact6" type="submit" value="Send">
+                    <p id="success"></p>
                   </div>
                 </form>
               </div>
@@ -550,11 +555,12 @@
         </div>
       </div>
       <div class="copyright-container">
-        <span class="copyright">&copy; 2022, joami</span>
+        <span class="copyright">&copy; 2022, Camila Bermejo & Joaquin Costamagna</span>
       </div>
     </footer>
 
     <script src="app.js" defer></script>
     <script src="lang.js" defer></script>
+    <script src="contact.js" defer></script>
   </body>
 </html>
