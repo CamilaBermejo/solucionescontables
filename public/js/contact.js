@@ -5,6 +5,7 @@ const contactMessage = document.querySelector("#message");
 const contactSuccess = document.querySelector("#success");
 const contactErrors = document.querySelectorAll(".error");
 
+
 // Validate Data
 function validateForm(){
 
@@ -41,6 +42,17 @@ function validateForm(){
 
     
 }
+
+contactEmail.addEventListener('change',()=>{
+    if(!emailIsValid(contactEmail.value) && contactEmail.value.length > 0){
+        contactErrors[1].innerText = data[currentLanguage].error1;
+        contactEmail.classList.add("error-border");
+    }
+    else{
+        clearMessages();
+    }
+    
+})
 
 
 // Clear error and success messages
