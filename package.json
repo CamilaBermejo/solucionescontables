@@ -2,7 +2,7 @@
   "name": "solucionescontables",
   "version": "1.0.0",
   "description": "Página informativa de soluciones contables.",
-  "main": "app.js",
+  "main": "server.jsn",
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js"
