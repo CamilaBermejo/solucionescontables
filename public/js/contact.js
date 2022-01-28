@@ -34,7 +34,7 @@ function validateForm(){
                 contactMessage.value = "";
             }
             else{
-                alert('something went wrong');
+                alert('Something went wrong, please contact solucionescontablessandiego@gmail.com');
             }
         }
         xhr.send(JSON.stringify(formData));
