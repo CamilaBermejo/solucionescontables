@@ -557,6 +557,7 @@ img.logo {
 
 .contact_form .input_box input:focus ~ span,
 .contact_form .input_box input:valid ~ span,
+.contact_form .input_box small:not(:empty) ~ span,
 .contact_form .input_box textarea:focus ~ span,
 .contact_form .input_box textarea:valid ~ span {
   color: #008e97;

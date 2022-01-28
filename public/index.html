@@ -8,6 +8,7 @@
     <link rel="icon" type="x-icon" href="/Contenido/Logos/Logo.png">
     <link rel="stylesheet" href="/css/style.css" />
     <script src="/js/nav.js" defer></script>
+    <script src="/js/contact.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -474,20 +475,20 @@
           <div class="contact">
             <div class="conteiner_contact">
               <div class="contact_form">
-                <form onsubmit="event.preventDefault(); validateForm()">
+                <form action="/PHPmailer/sendMail.php" method="post">
                   <h2 id="contact3">Contact Us</h2>
                   <div class="input_box">
-                    <input id="name" type="text" required="required">
+                    <input id="name" name="name" type="text" required="required">
                     <span id="contact4">Full Name</span>
                     <small class="error"></small>
                   </div>
                   <div class="input_box">
-                    <input  id="email" type="text" required="required">
-                    <span>Email</span>
+                    <input  id="email" name="email" type="email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     <small class="error"></small>
+                    <span>Email</span>
                   </div>
                   <div class="input_box">
-                    <textarea id="message" required="required"></textarea>
+                    <textarea id="message" name="message" required="required"></textarea>
                     <span id="contact5">Type your Message...</span>
                     <small class="error"></small>
                   </div>
@@ -510,7 +511,7 @@
         </div>
         <div class="footer-menus">
           <div class="footer_content_container">
-            <span class="menu_item_footer">admin@solucionescontablessd.com</span>
+            <span class="menu_item_footer">solucssd@solucionescontablessd.com</span>
             <span class="menu_item_footer">(707) 497-8153</span>
             <span class="menu_item_footer">18988 1/2 Vía Pamela</span>
           </div>
@@ -533,6 +534,5 @@
 
     <script src="/js/app.js" defer></script>
     <script src="/js/lang.js" defer></script>
-    <script src="/js/contact.js" defer></script>
   </body>
 </html>
