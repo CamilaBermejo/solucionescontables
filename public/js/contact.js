@@ -22,22 +22,23 @@ function validateForm(){
             message: contactMessage.value
         }
         
-        let xhr = new XMLHttpRequest();
-        xhr.open('POST', '/');
-        xhr.setRequestHeader('content-type', ' application/json');
-        xhr.onload = function(){
-            console.log(xhr.responseText);
-            if(xhr.responseText == 'success'){
-                alert('email sent');
-                contactName.value = "";
-                contactEmail.value = "";
-                contactMessage.value = "";
-            }
-            else{
-                alert('Something went wrong, please contact solucionescontablessandiego@gmail.com');
-            }
-        }
-        xhr.send(JSON.stringify(formData));
+        // ? Esto era la parte de node js
+        // let xhr = new XMLHttpRequest();
+        // xhr.open('POST', '/');
+        // xhr.setRequestHeader('content-type', ' application/json');
+        // xhr.onload = function(){
+        //     console.log(xhr.responseText);
+        //     if(xhr.responseText == 'success'){
+        //         alert('email sent');
+        //         contactName.value = "";
+        //         contactEmail.value = "";
+        //         contactMessage.value = "";
+        //     }
+        //     else{
+        alert('Something went wrong, please contact admin@solucionescontablessd.com');
+        //     }
+        // }
+        // xhr.send(JSON.stringify(formData));
     }
 
     
