@@ -27,7 +27,11 @@ const data = {
         "contact5": "Type your message...",
         "contact6": "Send",
         "error1": "Invalid email address",
-        "successMsg": "Email sent correctly",
+        "alertSuccessEmail": "Email sent correctly",
+        "alertErrorEmail": "Could not send email",
+        "alertImgSuccessEmail": "/Contenido/Utils/mail-download.gif",
+        "alertImgErrorEmail": "/Contenido/Utils/email-error.png",
+        "alertClose": "Close",
         "sepAbout": "/Contenido/Separators/SeparadorAboutUs.png",
         "sepServices": "/Contenido/Separators/SeparadorServices.png",
         "sepClients": "/Contenido/Separators/SeparadorClientes.png",
@@ -63,7 +67,11 @@ const data = {
         "contact5": "Escribe tu mensaje...",
         "contact6": "Enviar",
         "error1": "Dirección de email inválida",
-        "successMsg": "Correo enviado correctamente",
+        "alertSuccessEmail": "Correo enviado correctamente",
+        "alertErrorEmail": "No se pudo enviar el correo",
+        "alertImgSuccessEmail": "/Contenido/Utils/mail-download.gif",
+        "alertImgErrorEmail": "/Contenido/Utils/email-error.png",
+        "alertClose": "Cerrar",
         "sepAbout": "/Contenido/Separators/SeparadorAboutUsES.png",
         "sepServices": "/Contenido/Separators/SeparadorServiciosEs.png",
         "sepClients": "/Contenido/Separators/SeparadorClientesEs.png",
@@ -105,10 +113,24 @@ const sepServices = document.getElementById("services");
 const sepClients = document.getElementById("clients");
 const sepTestimonies = document.getElementById("testimonies");
 const sepContact = document.getElementById("contact");
-var currentLanguage = "english"
+var currentLanguage = document.cookie? document.cookie.split("=")[1] : "english";
+
+if(document.cookie){
+    currentLanguage = document.cookie.split("=")[1];
+
+    if(currentLanguage == "spanish")
+    {
+        toggle.removeAttribute("checked");
+    }
+    else{
+        toggle.setAttribute("checked", true);
+    }
+
+}
+
+translate(currentLanguage);
 
 
-//translate("english");
 
 toggle.addEventListener("click", () => {
     
@@ -118,6 +140,7 @@ toggle.addEventListener("click", () => {
     else {
         currentLanguage = "spanish";
     }
+    document.cookie = "language = " + currentLanguage; 
 
     translate(currentLanguage);
 })

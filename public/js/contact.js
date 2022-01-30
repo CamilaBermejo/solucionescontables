@@ -5,6 +5,10 @@ const contactMessage = document.querySelector("#message");
 const contactSuccess = document.querySelector("#success");
 const contactErrors = document.querySelectorAll(".error");
 const btnSend = document.querySelector("#contact6");
+const alertImg = document.getElementById("alert-img");
+const alertTxt = document.getElementById("alert-text");
+const alertClose = document.getElementById("alert-close");
+const alert = document.getElementById("custom-alert");
 
 
 // Validate Data
@@ -53,7 +57,6 @@ contactEmail.addEventListener('change',()=>{
     else{
         clearMessages();
     }
-    
 })
 
 
@@ -81,6 +84,44 @@ function emailIsValid(email){
 
 
 function succesMsg(){
-    alert(data[currentLanguage].succesMsg);
+    alert.style.display = "flex";
+    alertImg.setAttribute("src", data[currentLanguage].alertImgSuccessEmail);
+    alertTxt.innerText = data[currentLanguage].alertSuccessEmail;
+    alertClose.innerText = data[currentLanguage].alertClose;
 }
 
+function errorMsg(){
+    alert.style.display = "flex";
+    alertImg.setAttribute("src", data[currentLanguage].alertImgErrorEmail);
+    alertTxt.innerText = data[currentLanguage].alertErrorEmail;
+    alertClose.innerText = data[currentLanguage].alertClose;
+}
+
+alertClose.addEventListener("click", ()=>{
+    alert.style.display = "none";
+})
+
+function textAreaAdjust(element){
+    element.style.height = "1px";
+    element.style.height = (25+element.scrollHeight)+"px";
+}
+
+
+document.addEventListener('DOMContentLoaded', ()=> {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const email = urlParams.get('email')
+
+    if(!email){
+        return;
+    }
+
+    if (email == "success"){
+        succesMsg();
+    }
+    else if(email == "error"){
+        errorMsg();
+    }
+
+    window.history.pushState({}, document.title, window.location.pathname);
+})

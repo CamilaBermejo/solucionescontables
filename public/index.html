@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
     <title>Soluciones Contables</title>
     <link rel="icon" type="x-icon" href="/Contenido/Logos/Logo.png">
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/nav.js" defer></script>
-    <script src="/js/contact.js" defer></script>
+    <script src="/js/nav.js?1" defer></script>
+    <script src="/js/lang.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -25,18 +25,18 @@
 
         <div class="language-toggle">
           <input id="language-toggle" type="checkbox" checked="true">
-          <label for="language-toggle" class="englishbtn" language="english">EN</label>
+          <label for="language-toggle" class="englishbtn" >EN</label>
           <label for="language-toggle" class="spanishbtn" >ES</label>
         </div>
         
         <nav">
           <ul id="navigation" class="navigation" data-visible="false">
-            <li><a id="navHome" href="#">Home</a></li>
-            <li><a id="navAbout" href="#about">About Us</a></li>
-            <li><a id="navServ" href="#services">Services</a></li>
-            <li><a id="navClients" href="#clients">Clients/Industries</a></li>
-            <li><a id="navTest" href="#testimonies">Testimonies</a></li>
-            <li><a id="navContact" href="#contact">Contact</a></li>
+            <li><a class="navLink" id="navHome" href="#">Home</a></li>
+            <li><a class="navLink" id="navAbout" href="#about">About Us</a></li>
+            <li><a class="navLink" id="navServ" href="#services">Services</a></li>
+            <li><a class="navLink" id="navClients" href="#clients">Clients/Industries</a></li>
+            <li><a class="navLink" id="navTest" href="#testimonies">Testimonies</a></li>
+            <li><a class="navLink" id="navContact" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -44,6 +44,11 @@
 
     <main class="main">
       <div class="container">
+        <div id="custom-alert" class="custom-alert">
+          <img id="alert-img" src="/Contenido/Utils/mail-download.gif" alt="">
+          <h1 id="alert-text">Email sent correctly</h1>
+          <span id="alert-close">Close</span>
+        </div>
         <div class="home">
           <div class="grid">
             <div class="image">
@@ -483,12 +488,12 @@
                     <small class="error"></small>
                   </div>
                   <div class="input_box">
-                    <input  id="email" name="email" type="email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    <input  id="email" name="email" type="email" required="required" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
                     <small class="error"></small>
                     <span>Email</span>
                   </div>
                   <div class="input_box">
-                    <textarea id="message" name="message" required="required"></textarea>
+                    <textarea id="message" name="message" required="required" onkeyup="textAreaAdjust(this)"></textarea>
                     <span id="contact5">Type your Message...</span>
                     <small class="error"></small>
                   </div>
@@ -528,11 +533,11 @@
         </div>
       </div>
       <div class="copyright-container">
-        <span class="copyright">&copy; 2022, Camila Bermejo & Joaquin Costamagna</span>
+        <span class="copyright">&copy; 2022, Soluciones Contables San Diego<br> Design and Development by Camila Bermejo & Joaquin Costamagna</span>
       </div>
     </footer>
 
     <script src="/js/app.js" defer></script>
-    <script src="/js/lang.js" defer></script>
+    <script src="/js/contact.js" defer></script>
   </body>
 </html>

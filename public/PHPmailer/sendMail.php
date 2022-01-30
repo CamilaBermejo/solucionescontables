@@ -1,10 +1,10 @@
 <?php
 
-if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
-    echo '<script type="text/javascript">
-        alert("Por favor ingrese una dirección válida");
-        window.history.go(-1);
-        </script>';;
+
+if( !isset($_POST["name"]) ||
+    !isset($_POST["email"]) ||
+    !isset($_POST["message"]) ||
+    !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
     die();
     }
 
@@ -20,6 +20,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'src/Exception.php';
 require 'src/PHPMailer.php';
 require 'src/SMTP.php';
+require '../../auth.php';
 
 
 //Import PHPMailer classes into the global namespace
@@ -33,6 +34,14 @@ require 'src/SMTP.php';
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
+
+if(isset($_SERVER['HTTPS'])){
+    $protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
+}
+else{
+    $protocol = 'http';
+}
+$baseUrl =  $protocol . "://" . $_SERVER['HTTP_HOST'];
 
 try {
     //Server settings
@@ -49,7 +58,7 @@ try {
     $mail->setFrom('mailer@solucionescontablessd.com', 'SolucionesContablesSD');
     $mail->addAddress('jncostamagna@gmail.com');     //Add a recipient
     $mail->addAddress('solucssd@solucionescontablessd.com');               //Name is optional
-    $mail->addAddress('solucionescontablessandiego@gmail.com');               //Name is optional
+    //$mail->addAddress('solucionescontablessandiego@gmail.com');               //Name is optional
     $mail->addReplyTo('solucssd@solucionescontablessd.com', 'Information');
     // $mail->addCC('cc@example.com');
     // $mail->addBCC('bcc@example.com');
@@ -64,14 +73,20 @@ try {
     $mail->Body    = $body;
     $mail->AltBody = $body;
 
+    
+
     $mail->send();
-    echo '<script type="text/javascript">
-            alert("Mensaje enviado correctamente");
-            window.history.go(-1);
-        </script>';
+
+    $baseUrl .= '?email=success';
+
 } catch (Exception $e) {
-    echo '<script type="text/javascript">
-            alert("Something went wrong: '.$mail->ErrorInfo.'");
-            window.history.go(-1);
-        </script>';
+    $baseUrl .= '?email=error';
 }
+
+// echo '<script>
+//     location.href = "'. $baseUrl.'";
+//     </script>'
+
+header('Location: '. $baseUrl);
+
+exit();
