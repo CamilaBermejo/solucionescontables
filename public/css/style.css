@@ -340,13 +340,14 @@ img.logo {
   margin-bottom: 70px;
 }
 
-.contenedor_clientes .contenedor_controles {
+.contenedor_controles {
   display: flex;
   justify-content: right;
   align-items: center;
 }
 
-.contenedor_clientes .contenedor_controles .indicadores button {
+.contenedor_controles .indicadores button,
+.contenedor_controles .indicadores-testimonio button {
   background: #c4c4c4;
   height: 0.188rem;
   width: 0.625rem;
@@ -355,19 +356,21 @@ img.logo {
   margin-right: 0.188rem;
 }
 
-.contenedor_clientes .contenedor_controles .indicadores button:hover,
-.contenedor_clientes .contenedor_controles .indicadores button.activo {
+.contenedor_controles .indicadores button:hover,
+.contenedor_controles .indicadores button.activo,
+.contenedor_controles .indicadores-testimonio button.activo,
+.contenedor_controles .indicadores-testimonio button:hover {
   background: #008e97;
 }
 
-.contenedor_clientes .contenedor_principal {
+.contenedor_principal {
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.contenedor_clientes .contenedor_principal .flecha_izquierda,
-.contenedor_clientes .contenedor_principal .flecha_derecha {
+.contenedor_principal .flecha_izquierda,
+.contenedor_principal .flecha_derecha {
   position: absolute;
   border: none;
   font-size: 2.5rem;
@@ -380,45 +383,48 @@ img.logo {
   z-index: 50;
 }
 
-.contenedor_clientes .contenedor_principal .flecha_izquierda:hover,
-.contenedor_clientes .contenedor_principal .flecha_derecha:hover {
+.contenedor_principal .flecha_izquierda:hover,
+.contenedor_principal .flecha_derecha:hover {
   background: rgba(17, 88, 93, 0.5);
 }
 
-.contenedor_clientes .contenedor_principal .flecha_izquierda {
+.contenedor_principal .flecha_izquierda {
   left: 0;
   background: rgb(0, 0, 0, 0);
 }
 
-.contenedor_clientes .contenedor_principal .flecha_derecha {
+.contenedor_principal .flecha_derecha {
   right: 0;
   background: rgb(0, 0, 0, 0);
 }
 
-.contenedor_clientes .contenedor_principal .flecha_derecha img {
+.contenedor_principal .flecha_derecha img {
   position: absolute;
   width: 3rem;
   left: 0;
   top: calc(50% - 1.5rem);
 }
 
-.contenedor_clientes .contenedor_principal .flecha_izquierda img {
+.contenedor_principal .flecha_izquierda img {
   position: absolute;
   width: 3rem;
   right: 0;
   top: calc(50% - 1.5rem);
 }
 
-.contenedor_clientes .contenedor_carousel {
+.contenedor_carousel {
   width: 100%;
   padding: 1.25rem 0;
   overflow: hidden;
   scroll-behavior: smooth;
+  scroll-snap-align: center;
+  scroll-snap-type: x mandatory;
 }
 
-.contenedor_clientes .contenedor_carousel .carousel {
+.contenedor_carousel .carousel {
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
 }
 
 .contenedor_clientes .contenedor_carousel .carousel .elementos {
@@ -470,6 +476,17 @@ img.logo {
   color: white;
   font-size: clamp(16px, 1vw, 32px);
   margin: 3rem auto;
+}
+
+.contenedor_carousel .carousel .testimonie-container {
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.testimonies .testimonies-container .contenedor_principal .flecha-testimonio {
+  background: rgba(17, 88, 93, 0.5);
+  height: 30%;
+  top: calc(50% - 15%);
 }
 
 .testimonie .grid {

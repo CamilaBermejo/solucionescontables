@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/css/style.css" />
     <script src="/js/nav.js?1" defer></script>
     <script src="/js/lang.js" defer></script>
+    <script src="/js/app.js?1" defer></script>
+    <script src="/js/contact.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -444,33 +446,65 @@
             <img id="testimonies" class="separator" src="/Contenido/Separators/SeparadorTestimonies.png" alt="">
           </div>
           <div class="testimonies-container">
-            <article class="testimonie">
-              <div class="grid">
-                <img src="/Contenido/Utils/whitequote.png" alt="">
-                <p id="test1" class="quote">I have worked with Romina for the last year, and it has been a blessing. 
-                  I have always struggled with my books, now I just email her what I want and need and she gets everything back super fast and clear. 
-                  I just wish I had met her sooner so I had more time to grow my business.
-                  </p>
+            <div class="contenedor_controles">
+              <div class="indicadores-testimonio"></div>
+            </div>
+            <div class="contenedor_principal">
+              <button role="button" id="flecha_izquierda_testimonio" class="flecha_izquierda flecha-testimonio">
+                <img src="/Contenido/Utils/flecha_izquierda.png" alt="">
+              </button>
+              <div class="contenedor_carousel">
+                <div class="carousel">
+                  <div class="testimonie-container">
+                    <article class="testimonie">
+                      <div class="grid">
+                        <img src="/Contenido/Utils/whitequote.png" alt="">
+                        <p id="test1" class="quote">I have worked with Romina for the last year, and it has been a blessing. 
+                          I have always struggled with my books, now I just email her what I want and need and she gets everything back super fast and clear. 
+                          I just wish I had met her sooner so I had more time to grow my business.
+                          </p>
+                      </div>
+                      <div class="author">
+                        <p>Abe Lopez </p>
+                        <p>Abe Design Studio</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="testimonie-container">
+                    <article class="testimonie">
+                      <div class="grid">
+                        <img src="/Contenido/Utils/whitequote.png" alt="">
+                        <p id="test2" class="quote">It's hard to imagine my company without Soluciones Contables -- they've become that essential. 
+                          Romina and her team are so responsive, it's like they're right there in the office, working at my side. 
+                          As a small business owner, I have to trust my bookkeeper for almost everything. Whenever I need help, 
+                          I know I can always turn to Soluciones Contables. They are a natural extension of my operation.
+                          </p>
+                      </div>
+                      <div class="author">
+                        <p>Michael Vegas </p>
+                        <p>Complete Caregivers</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="testimonie-container">
+                    <article class="testimonie">
+                      <div class="grid">
+                        <img src="/Contenido/Utils/whitequote.png" alt="">
+                        <p id="test2" class="quote">Helping companies with their taxes requires deep dives into their books. We often see businesses with unorganized books, and this leads to delays in filing their taxes, obtaining loans, or closing important business deals. We refer Romina and her team to companies that need high quality books on a timely basis. She’s great at reviewing journals for mistakes, correcting payroll entries, and making sure your books are ready for review by the CPA. Tax firms and business owners alike can benefit by working with Romina!
+                          </p>
+                      </div>
+                      <div class="author">
+                        <p>Jorge P Garcia, EA</p>
+                        <p>GB Tax Consulting.</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
               </div>
-              <div class="author">
-                <p>Abe Lopez </p>
-                <p>Abe Design Studio</p>
-              </div>
-            </article>
-            <article class="testimonie">
-              <div class="grid">
-                <img src="/Contenido/Utils/whitequote.png" alt="">
-                <p id="test2" class="quote">It's hard to imagine my company without Soluciones Contables -- they've become that essential. 
-                  Romina and her team are so responsive, it's like they're right there in the office, working at my side. 
-                  As a small business owner, I have to trust my bookkeeper for almost everything. Whenever I need help, 
-                  I know I can always turn to Soluciones Contables. They are a natural extension of my operation.
-                  </p>
-              </div>
-              <div class="author">
-                <p>Michael Vegas </p>
-                <p>Complete Caregivers</p>
-              </div>
-            </article>
+              <button role="button" id="flecha_derecha_testimonio" class="flecha_derecha flecha-testimonio">
+                <img src="/Contenido/Utils/flecha_derecha.png" alt="">
+              </button>
+            </div>
           </div>
         </div>
         <div class="contactUs">
@@ -516,9 +550,9 @@
         </div>
         <div class="footer-menus">
           <div class="footer_content_container">
-            <span class="menu_item_footer">solucssd@solucionescontablessd.com</span>
+            <span class="menu_item_footer">admin@solucionescontablessd.com</span>
             <span class="menu_item_footer">(707) 497-8153</span>
-            <span class="menu_item_footer">18988 1/2 Vía Pamela</span>
+            <span class="menu_item_footer">18988 1/2 Vía Pamela, Jamul, CA 91935</span>
           </div>
           <div class="footer_content_container">
             <span class="menu_title">Legal</span>
@@ -536,8 +570,5 @@
         <span class="copyright">&copy; 2022, Soluciones Contables San Diego<br> Design and Development by Camila Bermejo & Joaquin Costamagna</span>
       </div>
     </footer>
-
-    <script src="/js/app.js" defer></script>
-    <script src="/js/contact.js" defer></script>
   </body>
 </html>
