@@ -133,7 +133,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
     window.history.pushState({}, document.title, window.location.pathname);
 })
 
-console.log(socialContactTrigger)
 
 socialContactTrigger.addEventListener("click", (e) =>{
     e.currentTarget.parentElement.classList.toggle("open");
@@ -153,12 +152,10 @@ window.addEventListener("scroll", ()=>{
         fixedButtons.style.top = "";
         fixedButtons.style.left = "";
     }
-    if(document.documentElement.scrollTop > about.offsetTop){
-        returnButton.style.display = "flex";
-        socialButtons.style.buttom = "7.5px";
+    if(document.documentElement.scrollTop > 10){
+        returnButton.style.opacity = "1";
     }
     else{
-        returnButton.style.display = "none";
-        socialButtons.style.buttom = "2.5px";
+        returnButton.style.opacity = "0";
     }
 })

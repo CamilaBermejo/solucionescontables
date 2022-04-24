@@ -216,7 +216,7 @@ img.logo {
   position: absolute;
   border-radius: 50%;
   text-decoration: none;
-  background: #6db4b8;
+  background: #11585d;
   display: grid;
   place-content: center;
   width: 5rem;
@@ -279,7 +279,7 @@ img.logo {
 .action-button-cotnainer .return-action-button-trigger{
   transform: rotate(-90deg);
   box-shadow: 0 0 9px 0 rgba(0,0,0,0.6);
-  display: none;
+  transition: opacity 500ms ease-in-out;
 }
 
 .home .grid {
