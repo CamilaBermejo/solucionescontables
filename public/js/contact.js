@@ -9,6 +9,13 @@ const alertImg = document.getElementById("alert-img");
 const alertTxt = document.getElementById("alert-text");
 const alertClose = document.getElementById("alert-close");
 const alert = document.getElementById("custom-alert");
+const socialContactTrigger = document.querySelector(".social-action-button-trigger");
+const footer = document.querySelector("footer");
+const fixedButtons = document.querySelector(".action-button-cotnainer");
+const body = document.querySelector("body");
+const about = document.querySelector("#about");
+const returnButton = document.querySelector(".return-action-button-trigger");
+const socialButtons = document.querySelector(".action-button-cotnainer .social-button")
 
 
 // Validate Data
@@ -124,4 +131,34 @@ document.addEventListener('DOMContentLoaded', ()=> {
     }
 
     window.history.pushState({}, document.title, window.location.pathname);
+})
+
+console.log(socialContactTrigger)
+
+socialContactTrigger.addEventListener("click", (e) =>{
+    e.currentTarget.parentElement.classList.toggle("open");
+})
+
+
+
+
+window.addEventListener("scroll", ()=>{
+    if (document.documentElement.scrollTop + window.innerHeight > footer.offsetTop + 8){
+        fixedButtons.style.position = "absolute";
+        fixedButtons.style.top = (footer.offsetTop - 16*8) + "px";
+        fixedButtons.style.left = (window.innerWidth - 8.25*16) + "px";
+    }
+    else{
+        fixedButtons.style.position = "fixed";
+        fixedButtons.style.top = "";
+        fixedButtons.style.left = "";
+    }
+    if(document.documentElement.scrollTop > about.offsetTop){
+        returnButton.style.display = "flex";
+        socialButtons.style.buttom = "7.5px";
+    }
+    else{
+        returnButton.style.display = "none";
+        socialButtons.style.buttom = "2.5px";
+    }
 })

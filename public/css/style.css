@@ -192,6 +192,96 @@ img.logo {
   padding: 0.7rem;
 }
 
+.action-button-cotnainer {
+  position: fixed;
+  bottom: 7.5rem;
+  right: 7.5rem;
+  z-index: 50;
+  justify-content: center;
+}
+
+.action-button-cotnainer .social-button{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-button-cotnainer .return-action-button-trigger{
+  position: absolute;
+}
+
+.action-button-cotnainer a,
+.action-button-cotnainer .social-button div{
+  position: absolute;
+  border-radius: 50%;
+  text-decoration: none;
+  background: #6db4b8;
+  display: grid;
+  place-content: center;
+  width: 5rem;
+  right: 0rem;
+  left: 0rem;
+  aspect-ratio: 1/1;
+}
+
+.action-button-cotnainer .social-button > div,
+.action-button-cotnainer .social-button > a{
+  bottom: 1rem;
+}
+
+.action-button-cotnainer .social-action-button {
+  background-color: rgb(0, 0, 0, 0);
+}
+
+.action-button-cotnainer .social-button{
+  --factor: 0;
+}
+
+.action-button-cotnainer .social-button > .social-action-button {
+  opacity: --factor;
+  transform: translateY(calc(-1 * var(--distance) * var(--factor)));
+  transition: transform 250ms ease-in, opacity 250ms ease-in-out;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 9px 0 rgba(0,0,0,calc(0.3 * var(--factor)));
+  width: 4.5rem;
+  left: .25rem;
+  bottom: 1.25rem;
+}
+
+.action-button-cotnainer .social-button.open {
+  --factor: 1;
+}
+
+.action-button-cotnainer .social-action-button:nth-child(1){
+  --distance: 5.5rem;
+}
+.action-button-cotnainer .social-action-button:nth-child(2){
+  --distance: 10.5rem;
+}
+.action-button-cotnainer .social-action-button:nth-child(3){
+  --distance: 15.5rem;
+}
+.action-button-cotnainer .social-action-button:nth-child(4){
+  --distance: 20.5rem;
+}
+
+.social-action-button-trigger{
+  transform: rotate(calc(-45deg * var(--factor)));
+  transition: transform 250ms ease-in;
+  box-shadow: 0 0 9px 0 rgba(0,0,0,0.6);
+}
+
+.action-button-cotnainer img{
+  width: 50px;
+}
+
+.action-button-cotnainer .return-action-button-trigger{
+  transform: rotate(-90deg);
+  box-shadow: 0 0 9px 0 rgba(0,0,0,0.6);
+  display: none;
+}
+
 .home .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -648,6 +738,7 @@ footer {
   flex-direction: column;
   background-color: #11585d;
   color: white;
+  z-index: 1000;
 }
 
 .copyright-container {
@@ -922,5 +1013,12 @@ footer .website_logo {
     width: 45%;
     border-bottom: none;
     align-items: center;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  .action-button-cotnainer .social-button > .social-action-button {
+    transform: translateX(calc(-1 * var(--distance) * var(--factor)));
+    transition: transform 250ms ease-in;
   }
 }
