@@ -15,7 +15,8 @@ const fixedButtons = document.querySelector(".action-button-cotnainer");
 const body = document.querySelector("body");
 const about = document.querySelector("#about");
 const returnButton = document.querySelector(".return-action-button-trigger");
-const socialButtons = document.querySelector(".action-button-cotnainer .social-button")
+const socialButtons = document.querySelector(".action-button-cotnainer .social-button");
+var contactOpened = false;
 
 
 // Validate Data
@@ -136,10 +137,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 socialContactTrigger.addEventListener("click", (e) =>{
     e.currentTarget.parentElement.classList.toggle("open");
+    socialContactTrigger.classList.remove("contact-animation");
+    contactOpened = true;
 })
-
-
-
 
 window.addEventListener("scroll", ()=>{
     if (document.documentElement.scrollTop + window.innerHeight > footer.offsetTop + 8){
@@ -159,3 +159,33 @@ window.addEventListener("scroll", ()=>{
         returnButton.style.opacity = "0";
     }
 })
+
+startContactAnimation();
+
+function startContactAnimation(){
+    startContactAnimation = setTimeout(
+        function() {
+            socialContactTrigger.classList.add("contact-animation");
+            if(contactOpened) return;
+            removeContactAnimation();
+        }, 3000);
+}
+
+function removeContactAnimation(){
+    stopContactAnimation = setTimeout(
+        function() {
+            socialContactTrigger.classList.remove("contact-animation");
+            if(contactOpened) return;
+            addContactAnimation();
+        }, 6500);
+}
+
+function addContactAnimation(){
+    playContactAnimation = setTimeout(
+        function() {
+            if(contactOpened) return;
+            socialContactTrigger.classList.add("contact-animation");
+            removeContactAnimation();
+        }, 10000);
+    
+}

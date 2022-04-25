@@ -37,6 +37,7 @@ const data = {
         "sepClients": "/Contenido/Separators/SeparadorClientes.png",
         "sepTestimonies": "/Contenido/Separators/SeparadorTestimonies.png",
         "sepContact": "/Contenido/Separators/SeparadorContact.png",
+        "contactCall": "Contact Us!",
 
     },
     "spanish": {
@@ -77,7 +78,7 @@ const data = {
         "sepClients": "/Contenido/Separators/SeparadorClientesEs.png",
         "sepTestimonies": "/Contenido/Separators/SeparadorTestimoniosEs.png",
         "sepContact": "/Contenido/Separators/SeparadorContactEs.png",
-
+        "contactCall": "Contactenos!",
     },
 }
 
@@ -113,6 +114,7 @@ const sepServices = document.getElementById("services");
 const sepClients = document.getElementById("clients");
 const sepTestimonies = document.getElementById("testimonies");
 const sepContact = document.getElementById("contact");
+const contactCall = document.getElementById("contactCall");
 var currentLanguage = document.cookie? document.cookie.split("=")[1] : "english";
 
 if(document.cookie){
@@ -172,6 +174,7 @@ function translate(language) {
     contact3.textContent = data[language].contact3;
     contact4.textContent = data[language].contact4;
     contact5.textContent = data[language].contact5;
+    contactCall.textContent = data[language].contactCall;
     contact6.setAttribute("value", data[language].contact6);
     sepAbout.setAttribute("src", data[language].sepAbout);
     sepServices.setAttribute("src", data[language].sepServices);
