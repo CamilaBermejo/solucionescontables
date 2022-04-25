@@ -277,26 +277,29 @@ img.logo {
 
 .social-action-button-trigger.contact-animation {
   animation: contact-us-animation 1.5s;
-  animation-iteration-count: 4;
+  animation-iteration-count: 3;
 }
 
 .social-action-button-trigger.contact-animation img{
   animation: contact-us-animation-img 1.5s;
-  animation-iteration-count: 4;
+  animation-iteration-count: 3;
 }
 
 @keyframes contact-us-animation-img {
   0%{
     transform: rotate(0deg) scale(100%);
   }
-  25%{
+  20%{
     transform: rotate(30deg) scale(110%);
   }
-  50%{
+  40%{
     transform: rotate(-30deg) scale(110%);
   }
-  75%{
+  60%{
     transform: rotate(30deg) scale(110%);
+  }
+  80%{
+    transform: rotate(-30deg) scale(110%);
   }
   100%{
     transform: rotate(-0deg) scale(100%);
@@ -307,10 +310,10 @@ img.logo {
   0%{
     transform: scale(100%);
   }
-  25%{
+  20%{
     transform: scale(110%);
   }
-  75%{
+  80%{
     transform: scale(110%);
   }
   100%{
@@ -333,7 +336,7 @@ img.logo {
   background-color: #11585d;
   color: white;
   border-radius: .5rem;
-  transition: opacity 300ms;
+  transition: opacity 500ms;
   box-shadow: 0 0 9px 0 rgba(0,0,0,.5);
 }
 

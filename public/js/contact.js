@@ -177,7 +177,7 @@ function removeContactAnimation(){
             socialContactTrigger.classList.remove("contact-animation");
             if(contactOpened) return;
             addContactAnimation();
-        }, 6500);
+        }, 5500);
 }
 
 function addContactAnimation(){
@@ -187,5 +187,4 @@ function addContactAnimation(){
             socialContactTrigger.classList.add("contact-animation");
             removeContactAnimation();
         }, 10000);
-    
 }
