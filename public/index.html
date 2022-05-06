@@ -11,6 +11,7 @@
     <script src="/js/lang.js?1" defer></script>
     <script src="/js/app.js?1" defer></script>
     <script src="/js/contact.js?1" defer></script>
+    <script src="/js/banner.js?1" defer></script>
   </head>
   <body>
     <header class="header">
@@ -33,7 +34,7 @@
         
         <nav">
           <ul id="navigation" class="navigation" data-visible="false">
-            <li><a class="navLink" id="navHome" href="#">Home</a></li>
+            <li><a class="navLink" id="navHome" href="#home">Home</a></li>
             <li><a class="navLink" id="navAbout" href="#about">About Us</a></li>
             <li><a class="navLink" id="navServ" href="#services">Services</a></li>
             <li><a class="navLink" id="navClients" href="#clients">Clients/Industries</a></li>
@@ -43,7 +44,52 @@
         </nav>
       </div>
     </header>
+    <div class="slider">
+      <div class="slides">
+        <input type="radio" name="radio-btn" id="bannerRadio1">
+        <input type="radio" name="radio-btn" id="bannerRadio2">
+        <input type="radio" name="radio-btn" id="bannerRadio3">
+        <input type="radio" name="radio-btn" id="bannerRadio4">
+        <input type="radio" name="radio-btn" id="bannerRadio5">
+        <input type="radio" name="radio-btn" id="bannerRadio6">
 
+        <div class="slide first">
+          <img src="/Contenido/Banners/banner-1.jpeg" alt="">
+        </div>
+        <div class="slide">
+          <img src="/Contenido/Banners/banner-2.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="/Contenido/Banners/banner-3.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="/Contenido/Banners/banner-4.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="/Contenido/Banners/banner-5.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="/Contenido/Banners/banner-6.jpg" alt="">
+        </div>
+
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+          <div class="auto-btn5"></div>
+          <div class="auto-btn6"></div>
+        </div>
+      </div>
+      <div class="navigation-manual">
+        <label for="bannerRadio1" class="manual-btn"></label>
+        <label for="bannerRadio2" class="manual-btn"></label>
+        <label for="bannerRadio3" class="manual-btn"></label>
+        <label for="bannerRadio4" class="manual-btn"></label>
+        <label for="bannerRadio5" class="manual-btn"></label>
+        <label for="bannerRadio6" class="manual-btn"></label>
+      </div>
+    </div>
     <main class="main">
       <div class="container">
         <div id="custom-alert" class="custom-alert">
@@ -63,7 +109,7 @@
         </div>
           <a href="#" class="return-action-button-trigger"><img src="/Contenido/Utils/flecha_derecha.png" alt=""></a>
         </div>
-        <div class="home">
+        <div id="home" class="home">
           <div class="grid">
             <div class="image">
               <img src="/Contenido/Logos/LogoConNombre.png" alt=""/>
