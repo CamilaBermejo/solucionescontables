@@ -30,7 +30,6 @@ main {
   width: min(100%, 1920px);
   display: flex;
   margin: auto;
-  margin-top: 42vw;
 }
 
 
@@ -52,7 +51,7 @@ div.separator {
 
 .language-toggle {
   position: relative;
-  display: inline;
+  display: block;
   flex-grow: 4;
   justify-content: right;
   margin-left: 2rem;
@@ -120,6 +119,7 @@ div.separator {
 
 header {
   z-index: 100;
+  width: 100%;
 }
 
 header a {
@@ -363,9 +363,9 @@ img.logo {
 
 .slider{
   width: fit-content;
-  position: absolute;
   height: 42vw;
   overflow: hidden;
+  position: absolute;
 } 
 
 .slides{
@@ -432,18 +432,19 @@ img.logo {
 .navigation-auto{
   position: absolute;
   display: flex;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
-  margin-top: calc(42vw - 35.5px);
+  margin-top: calc(42vw - 37px);
 }
 
 .navigation-auto div{
-  border: 2px solid #5aabaf;
+  border: 2px solid #11585d;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.5s;
 }
+
 
 .navigation-auto div:not(:last-child){
   margin-right: 40px;
@@ -468,6 +469,9 @@ img.logo {
   background: #5aabaf;
 }
 
+.home{
+  margin-top: 42vw;
+}
 
 .home .grid {
   display: grid;
