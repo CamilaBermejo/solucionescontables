@@ -441,47 +441,6 @@ img.logo {
   margin-left: -83.3333%;
 }
 
-.navigation-auto{
-  position: relative;
-  display: flex;
-  width: 100%;
-  justify-self: center;
-  justify-content: center;
-  margin-top: calc(42vw - 50px);
-}
-
-.navigation-auto div{
-  border: 2px solid #11585d;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-
-.navigation-auto div:not(:last-child){
-  margin-left: 40px;
-}
-
-#bannerRadio1:checked ~ .navigation-auto .auto-btn1{
-  background: #5aabaf;
-}
-#bannerRadio2:checked ~ .navigation-auto .auto-btn2{
-  background: #5aabaf;
-}
-#bannerRadio3:checked ~ .navigation-auto .auto-btn3{
-  background: #5aabaf;
-}
-#bannerRadio4:checked ~ .navigation-auto .auto-btn4{
-  background: #5aabaf;
-}
-#bannerRadio5:checked ~ .navigation-auto .auto-btn5{
-  background: #5aabaf;
-}
-#bannerRadio6:checked ~ .navigation-auto .auto-btn6{
-  background: #5aabaf;
-}
-
 
 .home .grid {
   display: grid;
