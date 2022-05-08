@@ -1,4 +1,12 @@
-const slides = document.querySelectorAll(".slide");
+const manualButtons = document.querySelectorAll(".manual-btn");
+
+manualButtons.forEach(button => {
+    button.addEventListener('click', (e)=>{
+        document.querySelector('.checked').classList.remove('checked');
+        e.currentTarget.classList.add('checked');
+    })
+})
+
 
 
 var counter = 1;
