@@ -6,7 +6,7 @@ const elementos = document.querySelectorAll('.elementos');
 const flechaIzquierda = document.getElementById('flecha_izquierda');
 const flechaDerecha = document.getElementById('flecha_derecha');
 
-const filaTestimonio = document.querySelectorAll('.contenedor_carousel')[1];
+const filaTestimonio = document.querySelectorAll('.carousel')[1];
 const testimonios = document.querySelectorAll(".testimonie-container");
 
 const flechaIzquierdaTestimonios = document.querySelector("#flecha_izquierda_testimonio");
@@ -14,6 +14,7 @@ const flechaIzquierdaTestimonios = document.querySelector("#flecha_izquierda_tes
 const flechaDerechaTestimonio = document.querySelector("#flecha_derecha_testimonio");
 
 var posTestimonio = 0;
+const displaceUnit = 100;
 
 flechaDerecha.addEventListener('click', () => {
     fila.scrollLeft += fila.offsetWidth;
@@ -39,7 +40,8 @@ flechaIzquierda.addEventListener('click', () => {
 
 flechaDerechaTestimonio.addEventListener('click', () => {
     (posTestimonio == testimonios.length - 1)? posTestimonio : posTestimonio +=1;
-    filaTestimonio.scrollLeft = posTestimonio * filaTestimonio.offsetWidth;
+    let displace = displaceUnit * -1 * posTestimonio;
+    filaTestimonio.style.transform = 'translateX('+ displace + '%)'
 
     const indicadorActivo = document.querySelector('.indicadores-testimonio .activo');
     if(indicadorActivo.nextSibling){
@@ -50,7 +52,8 @@ flechaDerechaTestimonio.addEventListener('click', () => {
 
 flechaIzquierdaTestimonios.addEventListener('click', () => {
     (posTestimonio == 0)? posTestimonio : posTestimonio -=1;
-    filaTestimonio.scrollLeft = posTestimonio * filaTestimonio.offsetWidth;
+    let displace = displaceUnit * -1 * posTestimonio;
+    filaTestimonio.style.transform = 'translateX('+ displace + '%)'
 
     const indicadorActivo = document.querySelector('.indicadores-testimonio .activo');
     if(indicadorActivo.previousSibling){
@@ -87,7 +90,8 @@ for (let i = 0; i < numeroPaginasTestimonios; i ++){
 
     document.querySelector('.indicadores-testimonio').appendChild(indicador);
     indicador.addEventListener('click', (e) => {
-        filaTestimonio.scrollLeft = i * filaTestimonio.offsetWidth;
+        let displace = displaceUnit * -1 * i;
+        filaTestimonio.style.transform = 'translateX('+ displace + '%)'
 
         document.querySelector('.indicadores-testimonio .activo').classList.remove('activo');
         e.target.classList.add('activo');

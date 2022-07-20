@@ -20,8 +20,6 @@ const data = {
         "client8": "Digital Marketing",
         "client9": "Retailers",
         "client10": "Non Profits",
-        "test1": "I have worked with Romina for the last year, and it has been a blessing. I have always struggled with my books, now I just email her what I want and need and she gets everything back super fast and clear. I just wish I had met her sooner so I had more time to grow my business.",
-        "test2": "It's hard to imagine my company without Soluciones Contables -- they've become that essential. Romina and her team are so responsive, it's like they're right there in the office, working at my side. As a small business owner, I have to trust my bookkeeper for almost everything. Whenever I need help, I know I can always turn to Soluciones Contables. They are a natural extension of my operation.",
         "contact3": "Contact Us",        
         "contact4": "Full Name",
         "contact5": "Type your message...",
@@ -61,8 +59,6 @@ const data = {
         "client8": "Marketing Digital",
         "client9": "Minoristas",
         "client10": "Sin fines de lucro",
-        "test1": "I have worked with Romina for the last year, and it has been a blessing. I have always struggled with my books, now I just email her what I want and need and she gets everything back super fast and clear. I just wish I had met her sooner so I had more time to grow my business.",
-        "test2": "It's hard to imagine my company without Soluciones Contables -- they've become that essential. Romina and her team are so responsive, it's like they're right there in the office, working at my side. As a small business owner, I have to trust my bookkeeper for almost everything. Whenever I need help, I know I can always turn to Soluciones Contables. They are a natural extension of my operation.",
         "contact3": "Contáctanos",        
         "contact4": "Nombre Completo",
         "contact5": "Escribe tu mensaje...",
@@ -102,8 +98,6 @@ const client7 = document.getElementById("client7");
 const client8 = document.getElementById("client8");
 const client9 = document.getElementById("client9");
 const client10 = document.getElementById("client10");
-const test1 = document.getElementById("test1");
-const test2 = document.getElementById("test2");
 const toggle = document.getElementById("language-toggle");
 const contact3 = document.getElementById("contact3");
 const contact4 = document.getElementById("contact4");
@@ -169,8 +163,6 @@ function translate(language) {
     client8.textContent = data[language].client8;
     client9.textContent = data[language].client9;
     client10.textContent = data[language].client10;
-    test1.textContent = data[language].test1;
-    test2.textContent = data[language].test2;
     contact3.textContent = data[language].contact3;
     contact4.textContent = data[language].contact4;
     contact5.textContent = data[language].contact5;
