@@ -36,9 +36,12 @@ main {
 body {
   font-size: 0.75rem;
   min-width: 741.213px;
-  /* width: fit-content; */
   overflow-x: hidden;
   background-color: white;
+}
+
+.container {
+  max-width: 100%;
 }
 
 .separator {
@@ -678,7 +681,7 @@ img.logo {
   top: calc(50% - 1.5rem);
 }
 
-.contenedor_carousel {
+.clients .contenedor_carousel {
   width: 100%;
   padding: 1.25rem 0;
   overflow: hidden;
@@ -687,7 +690,7 @@ img.logo {
   scroll-snap-type: x mandatory;
 }
 
-.contenedor_carousel .carousel {
+.clients .contenedor_carousel .carousel {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -735,8 +738,15 @@ img.logo {
   justify-content: center;
 }
 
+.testimonies .contenedor_carousel {
+  min-width: 0;
+  overflow: hidden;
+}
+
 .testimonies .carousel {
   transition: transform 250ms ease-in-out;
+  display: flex;
+  min-width: 0;
 }
 
 .testimonie {
@@ -746,12 +756,14 @@ img.logo {
   width: min(60rem, 80%);
   color: white;
   font-size: clamp(16px, 1vw, 32px);
-  margin: 3rem auto;
+  margin: 1.5rem 0;
 }
 
-.contenedor_carousel .carousel .testimonie-container {
-  min-width: 100%;
-  overflow: hidden;
+.testimonies .carousel .testimonie-container {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
 }
 
 .testimonies .testimonies-container .contenedor_principal .flecha-testimonio {
