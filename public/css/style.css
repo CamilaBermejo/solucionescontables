@@ -754,6 +754,7 @@ img.logo {
   border-radius: 2rem;
   padding: 2rem 3rem;
   width: min(60rem, 80%);
+  height: fit-content;
   color: white;
   font-size: clamp(16px, 1vw, 32px);
   margin: 1.5rem 0;
@@ -764,6 +765,7 @@ img.logo {
   display: flex;
   flex-shrink: 0;
   justify-content: center;
+  align-items: center;
 }
 
 .testimonies .testimonies-container .contenedor_principal .flecha-testimonio {
